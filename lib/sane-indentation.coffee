@@ -18,7 +18,7 @@ module.exports = SaneIndentation =
     @subscriptions.add atom.commands.add 'atom-workspace', 'sane-indentation:toggle': => @toggle()
 
     atom.workspace.observeTextEditors (e) ->
-      e.languageMode.__proto__.suggestedIndentForTokenizedLineAtBufferRow = (bufferRow, line, tokenizedLine, options) ->
+      e.languageMode.suggestedIndentForTokenizedLineAtBufferRow = (bufferRow, line, tokenizedLine, options) ->
 
         # Count the number of occurence of regex in string, given its tokenized
         # version, and ignoring any occurence that start inside a quoted string
@@ -34,6 +34,10 @@ module.exports = SaneIndentation =
             m = regex.searchSync(string, m[0].start + 1)
           count
 
+        getRegex = (pattern) ->
+          new OnigRegExp(atom.config.get('editor.sane.' + pattern,
+            scope: e.scopeDescriptorForBufferPosition(0).scopes))
+
         # console.log tokenizedLine
         iterator = tokenizedLine.getTokenIterator()
         iterator.next()
@@ -44,9 +48,23 @@ module.exports = SaneIndentation =
         # increaseIndentRegex = @increaseIndentRegexForScopeDescriptor(scopeDescriptor)
         # decreaseIndentRegex = @decreaseIndentRegexForScopeDescriptor(scopeDescriptor)
         # decreaseNextIndentRegex = @decreaseNextIndentRegexForScopeDescriptor(scopeDescriptor)
-        increaseIndentRegex = new OnigRegExp("[\\{\\[\\(]")
-        decreaseIndentRegex = new OnigRegExp("^\\s*[\\}\\]\\)]")
-        decreaseNextIndentRegex = new OnigRegExp("[\\}\\]\\)]")
+
+        # increaseIndentRegex = new OnigRegExp("[\\{\\[\\(]")
+        # decreaseIndentRegex = new OnigRegExp("^\\s*[\\}\\]\\)]")
+        # decreaseNextIndentRegex = new OnigRegExp("[\\}\\]\\)]")
+
+        console.log(e.scopeDescriptorForBufferPosition(0))
+        # increaseIndentRegex = new OnigRegExp(atom.config.get('editor.increaseIndentPattern', {scope: ['source.js']}))
+
+
+        # increaseIndentRegex = new OnigRegExp(atom.config.get('editor.increaseIndentPattern',
+        #   scope: e.scopeDescriptorForBufferPosition(0).scopes))
+        increaseIndentRegex = getRegex('increaseIndentPattern')
+        decreaseIndentRegex = getRegex('decreaseIndentPattern')
+        decreaseNextIndentRegex = getRegex('decreaseNextIndentPattern')
+        console.log("increase", increaseIndentRegex,
+          "decrease", decreaseIndentRegex,
+          "decreaseNext", decreaseNextIndentRegex)
 
         if not decreaseNextIndentRegex
           decreaseNextIndentRegex = decreaseIndentRegex

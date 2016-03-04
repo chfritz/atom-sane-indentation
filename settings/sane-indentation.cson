@@ -1,0 +1,32 @@
+'.source.js':
+  editor:
+    sane:
+      decreaseIndentPattern: "^\\s*[\\}\\]\\)]"
+      decreaseNextIndentPattern: "[\\}\\]\\)]"
+      increaseIndentPattern: "[\\{\\[\\(]"
+
+'.source.c, .source.cpp, .source.objc, .source.objcpp':
+  editor:
+    sane:
+      # increaseIndentPattern: '(?x)
+      #    [\\{\\(]
+      #   |^ \\s* (public|private|protected): \\s* $
+      #   |^ \\s* @(public|private|protected) \\s* $
+      #   |^ \\s* \\{ \\} $
+      #   '
+      # decreaseIndentPattern: '(?x)
+      #    ^ \\s* (\\s* /[*] .* [*]/ \\s*)* \\}
+      #   |^ \\s* (\\s* /[*] .* [*]/ \\s*)* \\)
+      #   |^ \\s* (public|private|protected): \\s* $
+      #   |^ \\s* @(public|private|protected) \\s* $
+      #   '
+      # decreaseNextIndentPattern: '(?x)
+      #    [\\}\\)]
+      #   '
+      decreaseIndentPattern: "^\\s*[\\}\\]\\)]"
+      decreaseNextIndentPattern: "[\\}\\]\\)]"
+      # |^ \\s* (public|private|protected): \\s* $
+      # |^ \\s* @(public|private|protected) \\s* $"
+      increaseIndentPattern: "[\\{\\[\\(]"
+      # |^ \\s* (public|private|protected): \\s* $
+      # |^ \\s* @(public|private|protected) \\s* $"
