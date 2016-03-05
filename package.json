@@ -1,12 +1,10 @@
 {
   "name": "sane-indentation",
   "main": "./lib/sane-indentation",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Sane indentation logic",
-  "keywords": [
-  ],
-  "activationCommands": {
-  },
+  "keywords": [],
+  "activationCommands": {},
   "repository": "https://github.com/chfritz/atom-sane-indentation",
   "license": "MIT",
   "engines": {
