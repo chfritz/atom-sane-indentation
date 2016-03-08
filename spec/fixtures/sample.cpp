@@ -20,7 +20,6 @@ void main(int argc, char** argv) {
 
 
 // from issue https://github.com/atom/atom/issues/6655
-
 void main() {
   bool does_indentation_work = 1;
   if (does_indentation_work) {
