@@ -4,6 +4,11 @@
       decreaseIndentPattern: "^\\s*[\\}\\]\\)]"
       decreaseNextIndentPattern: "[\\}\\]\\)]"
       increaseIndentPattern: "[\\{\\[\\(]"
+      cliffTokens: [")",".","*","/","+","-","=","-=", "+=", "*=", "/=",
+        "&=", "|=", "!=", "^="]
+      # whenever a line ends with this or a new line starts with this the new
+      # line should be indented but only until the expression ends (";" or the
+      # current block ends)
 
 '.source.c, .source.cpp, .source.objc, .source.objcpp':
   editor:
