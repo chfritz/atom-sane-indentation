@@ -10,6 +10,14 @@
       # line should be indented but only until the expression ends (";" or the
       # current block ends)
 
+# '.source.css':
+#   editor:
+#     sane:
+#       decreaseIndentPattern: "^\\s*[\\}]"
+#       decreaseNextIndentPattern: "[\\}]"
+#       increaseIndentPattern: "[\\{]"
+#       cliffTokens: []
+
 '.source.c, .source.cpp, .source.objc, .source.objcpp':
   editor:
     sane:
