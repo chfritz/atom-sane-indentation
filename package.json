@@ -11,6 +11,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "oniguruma": "^5"
+    "oniguruma": "^6"
   }
 }
