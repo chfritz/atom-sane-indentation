@@ -1,7 +1,7 @@
 {
   "name": "sane-indentation",
   "main": "./lib/sane-indentation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Sane indentation logic",
   "keywords": [],
   "activationCommands": {},
