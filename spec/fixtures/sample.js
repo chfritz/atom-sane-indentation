@@ -1,9 +1,15 @@
+foo(2,
+  {
+    sd,
+    sdf
+  }, 4);
+var zero;
+
 foo(2, {
-
-
+    sd,
+    sdf
   },
   4);
-
 var zero;
 
 req.
@@ -17,8 +23,7 @@ var x = [
 
 // https://github.com/atom/atom/issues/6691
 
-if (true)
-{
+if (true) {
   foo();
   bar();
 }
