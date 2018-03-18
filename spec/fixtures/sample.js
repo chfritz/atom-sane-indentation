@@ -23,8 +23,7 @@ var x = [
 
 // https://github.com/atom/atom/issues/6691
 
-if (true)
-{
+if (true) {
   foo();
   bar();
 }
