@@ -1,9 +1,15 @@
+foo(2,
+  {
+    sd,
+    sdf
+  }, 4);
+var zero;
+
 foo(2, {
-
-
+    sd,
+    sdf
   },
   4);
-
 var zero;
 
 req.
