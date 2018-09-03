@@ -1,15 +1,22 @@
-foo(2,
+foo( 2,
   {
     sd,
     sdf
-  }, 4);
+  },
+  4
+);
 var zero;
 
-foo(2, {
+foo( 2, {
     sd,
     sdf
   },
-  4);
+  4
+);
+
+foo( 2,
+4);  // WRONG
+
 var zero;
 
 req.
@@ -26,14 +33,12 @@ var x = [
 if (true) {
   foo();
   bar();
-}
-else
-{
+  } else {
   foo();
   bar();
 }
 
 if (true)
-  foo();
+foo();
 else
-  bar();
+bar();

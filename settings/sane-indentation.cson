@@ -1,6 +1,8 @@
+
 '.source.js':
   editor:
     sane:
+      scopes: ['array', 'object', 'assignment_expression', 'statement_block']
       decreaseIndentPattern: "^\\s*[\\}\\]\\)]"
       decreaseNextIndentPattern: "[\\}\\]\\)]"
       increaseIndentPattern: "[\\{\\[\\(]"
@@ -8,8 +10,8 @@
         decrease: "^\\s*\\*\\/"
         decreaseNext: "\\*\\/"
         increase: "\\/\\*"
-      cliffTokens: [")",".","*","/","+","-","=","-=", "+=", "*=", "/=",
-        "&=", "|=", "!=", "^="]
+      cliffTokens: [".", "*", "/", "+", "-", "=", "-=", "+=", "*=", "/=",
+        "&=", "|=", "!=", "^=", "&&", "||"]
       # whenever a line ends with this or a new line starts with this the new
       # line should be indented but only until the expression ends (";" or the
       # current block ends)
