@@ -28,9 +28,7 @@ var x = [
   4
 ];
 
-
 // https://github.com/atom/atom/issues/6691
-
 if (true) {
   foo();
   bar();
@@ -44,6 +42,7 @@ if (true)
 else
   bar();
 
+// --------------------------------------------------
 // TODO:
 req.
 shouldBeOne().
