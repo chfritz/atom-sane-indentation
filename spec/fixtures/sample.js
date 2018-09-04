@@ -14,14 +14,15 @@ foo( 2, {
   4
 );
 
-foo( 2,
-4);  // WRONG
+foo(2,
+  4);
+
+foo({
+    a: 1
+  });
 
 var zero;
 
-req.
-shouldBeOne().
-shouldBeOneToo;
 var x = [
   3,
   4
@@ -33,12 +34,28 @@ var x = [
 if (true) {
   foo();
   bar();
-  } else {
+} else {
   foo();
   bar();
 }
 
 if (true)
-foo();
+  foo();
 else
-bar();
+  bar();
+
+// TODO:
+req.
+shouldBeOne().
+shouldBeOneToo;
+
+html = (
+  <div>
+    good
+    </div title='bad'>
+);
+
+// broken syntax: just keep indentation from last line that worked?
+if (true) {
+foo({
+where_should_this_go: 1,

@@ -1,16 +1,13 @@
 {
   "name": "sane-indentation",
   "main": "./lib/sane-indentation",
-  "version": "0.2.1",
-  "description": "Sane indentation logic",
+  "version": "1.0.0",
+  "description": "Sane indentation logic, now using tree-sitter parse tree",
   "keywords": [],
   "activationCommands": {},
   "repository": "https://github.com/chfritz/atom-sane-indentation",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
-    "oniguruma": "^6"
+    "atom": ">=1.29"
   }
 }
