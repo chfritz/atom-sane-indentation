@@ -1,7 +1,7 @@
 {
   "name": "sane-indentation",
   "main": "./lib/sane-indentation",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Sane indentation logic, now using tree-sitter parse tree",
   "keywords": [],
   "activationCommands": {},
