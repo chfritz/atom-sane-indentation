@@ -1,14 +1,11 @@
 
 class Test {
 
-  public:
+public:
   void test();
 
-
-
-  private:
+private:
   void more();
-
 
 };
 
@@ -67,7 +64,7 @@ struct year {
   int year;
   struct year *next;
   struct day *ptr; };
-
+  
 struct day {
   int day;
   double expenses;
