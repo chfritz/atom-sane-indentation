@@ -1,21 +1,18 @@
 
 class Test {
 
-  public:
+public:
   void test();
 
-
-
-  private:
+private:
   void more();
-
 
 };
 
 void main(int argc, char** argv) {
 
 
-  return 1;
+return 1;
 }
 
 
@@ -30,11 +27,11 @@ void main() {
 
   if (alternate_style_indentation)
   {
-    printf('still works');
+    printf("still works");
   }
 
   else {
-    printf('hmmm...');
+    printf("hmmm...");
   }
 
   int test_function = function_with_param(this_param,
@@ -67,7 +64,7 @@ struct year {
   int year;
   struct year *next;
   struct day *ptr; };
-
+  
 struct day {
   int day;
   double expenses;
