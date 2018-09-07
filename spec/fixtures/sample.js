@@ -48,10 +48,32 @@ req.
 shouldBeOne().
 shouldBeOneToo;
 
-html = (
-  <div>
+const jsx = (
+  <div
+    title='start'
+    >
     good
-    </div title='bad'>
+    <a>
+      link
+    </a>
+    <i>
+      sdfg
+    </i>
+    <div>
+      sdf
+    </div>
+  </div>
+);
+
+const two = (
+  <div>
+    <b>
+      test
+    </b>
+    <b>
+      test
+    </b>
+  </div>
 );
 
 // broken syntax: just keep indentation from last line that worked?
