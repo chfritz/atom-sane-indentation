@@ -88,6 +88,15 @@ too.
   more.
   shouldBeOneToo;
 
+const a =
+  long_expression;
+
+b =
+  long;
+
+b =
+  3 + 5;
+
 // --------------------------------------------------
 // TODO:
 foo({
