@@ -82,6 +82,7 @@ const x = {
   }
 }
 
+/* multi-line expressions */
 req
   .shouldBeOne();
 too.
@@ -96,6 +97,14 @@ b =
 
 b =
   3 + 5;
+
+/**
+  Comments
+*/
+
+while (mycondition) {
+  sdfsdfg();
+}
 
 // --------------------------------------------------
 // TODO:

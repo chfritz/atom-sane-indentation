@@ -1,6 +1,6 @@
-VERSION=$(node -e "x = `cat package.json`; console.log(x.version)")
+VERSION=$(node -e "x = `cat package.json`; console.log('v' + x.version)")
 git commit -a
-git tag v${VERSION}
+git tag ${VERSION}
 git push
-git push origin v${VERSION}
-apm publish -t v${VERSION}
+git push origin ${VERSION}
+apm publish -t ${VERSION}
