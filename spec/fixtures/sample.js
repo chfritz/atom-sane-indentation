@@ -42,12 +42,6 @@ if (true)
 else
   bar();
 
-// --------------------------------------------------
-// TODO:
-req.
-shouldBeOne().
-shouldBeOneToo;
-
 const jsx = (
   <div
     title='start'
@@ -76,7 +70,28 @@ const two = (
   </div>
 );
 
-// broken syntax: just keep indentation from last line that worked?
+const x = {
+  g: {
+    a: 1,
+    b: 2
+  },
+  h: {
+    c: 3
+  }
+}
+
+// --------------------------------------------------
+// TODO:
+req
+.shouldBeOne();
+too.
+more.
+shouldBeOneToo;
+
+// --------------------------------------------------
+
+// broken syntax: keep last line's indentation
 if (true) {
-foo({
-where_should_this_go: 1,
+  foo({
+      a: 1,
+      }
