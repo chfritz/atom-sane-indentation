@@ -14,12 +14,14 @@ foo( 2, {
   4
 );
 
+foo( 2,
+  {
+    sd,
+    sdf
+  });
+
 foo(2,
   4);
-
-foo({
-    a: 1
-  });
 
 var zero;
 
@@ -80,18 +82,22 @@ const x = {
   }
 }
 
+req
+  .shouldBeOne();
+too.
+  more.
+  shouldBeOneToo;
+
 // --------------------------------------------------
 // TODO:
-req
-.shouldBeOne();
-too.
-more.
-shouldBeOneToo;
+foo({
+    detect_symetric_opening_and_closing_scopes: 'indent me at 1'
+  });
 
 // --------------------------------------------------
 
 // broken syntax: keep last line's indentation
 if (true) {
-  foo({
-      a: 1,
-      }
+foo({
+a: 1,
+}
