@@ -1,11 +1,9 @@
-foo( 2,
-  {
+foo({
     sd,
     sdf
   },
   4
 );
-var zero;
 
 foo( 2, {
     sd,
@@ -23,14 +21,19 @@ foo( 2,
 foo(2,
   4);
 
-var zero;
-
 var x = [
   3,
   4
 ];
 
-// https://github.com/atom/atom/issues/6691
+let h = {
+  a: [ 1,
+    2 ],
+  b: { j: [
+      { l: 1 }]
+  }
+};
+
 if (true) {
   foo();
   bar();
@@ -111,6 +114,22 @@ while (mycondition) {
 foo({
     detect_symetric_opening_and_closing_scopes: 'indent me at 1'
   });
+
+const y = [
+  1
+  ];
+
+// https://github.com/atom/atom/issues/6691
+if (true)
+  {
+  foo();
+  bar();
+}
+else
+  {
+  foo();
+  bar();
+}
 
 // --------------------------------------------------
 
