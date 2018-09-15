@@ -18,21 +18,55 @@ foo( 2,
     sdf
   });
 
+foo( 2, {
+  sd,
+  sdf
+});
+
 foo(2,
   4);
+
+foo({
+  detect_symetric_opening_and_closing_scopes: 'indent me at 1'
+});
+
 
 var x = [
   3,
   4
 ];
 
+const y = [
+  1
+];
+
+const j = [{
+  a: 1
+}];
+
 let h = {
   a: [ 1,
     2 ],
   b: { j: [
       { l: 1 }]
-  }
+  },
+  c:
+  { j: [
+      { l: 1 }]
+  },
 };
+
+const a =
+  {
+    b: 1
+  };
+
+
+/** if-then-else loops */
+if (true)
+  foo();
+else
+  bar();
 
 if (true) {
   foo();
@@ -42,15 +76,78 @@ if (true) {
   bar();
 }
 
+// https://github.com/atom/atom/issues/6691
 if (true)
+{
   foo();
-else
   bar();
+}
+else
+{
+  foo();
+  bar();
+}
 
+const x = {
+  g: {
+    a: 1,
+    b: 2
+  },
+  h: {
+    c: 3
+  }
+}
+
+/** While loops */
+while (condition)
+  inLoop();
+
+while (mycondition) {
+  sdfsdfg();
+}
+
+while (mycondition)
+{
+  sdfsdfg();
+}
+
+switch (e) {
+  case 5:
+  something();
+  more();
+  case 6:
+  somethingElse();
+  case 7:
+  default:
+  done();
+}
+
+/* multi-line expressions */
+req
+  .shouldBeOne();
+too.
+  more.
+  shouldBeOneToo;
+
+const a =
+  long_expression;
+
+b =
+  long;
+
+b =
+  3 + 5;
+
+b =
+  3
+  + 5;
+
+
+/** JSX */
 const jsx = (
   <div
     title='start'
-    >
+  >
     good
     <a>
       link
@@ -75,66 +172,33 @@ const two = (
   </div>
 );
 
-const x = {
-  g: {
-    a: 1,
-    b: 2
-  },
-  h: {
-    c: 3
-  }
-}
+const a = (
+  <img
+    src='/img.jpg'
+  />
+);
 
-/* multi-line expressions */
-req
-  .shouldBeOne();
-too.
-  more.
-  shouldBeOneToo;
-
-const a =
-  long_expression;
-
-b =
-  long;
-
-b =
-  3 + 5;
+const b = (
+  <img
+    src='/img.jpg' />
+);
 
 /**
-  Comments
+  A comment, should be at 1
 */
-
-while (mycondition) {
-  sdfsdfg();
-}
 
 // --------------------------------------------------
 // TODO:
-foo({
-    detect_symetric_opening_and_closing_scopes: 'indent me at 1'
-  });
 
-const y = [
-  1
-  ];
+/**
+  Not ideal, but should be solved by parsing the delimiters:
+should be at 1; */
 
-// https://github.com/atom/atom/issues/6691
-if (true)
-  {
-  foo();
-  bar();
-}
-else
-  {
-  foo();
-  bar();
-}
-
-// --------------------------------------------------
+// -------------------------------------------------
 
 // broken syntax: keep last line's indentation
+// (can we somehow force tree-sitter to re-parse just locally)
 if (true) {
 foo({
-a: 1,
+  a: 1,
 }
