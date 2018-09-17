@@ -190,6 +190,14 @@ const b = (
 // --------------------------------------------------
 // TODO:
 
+const two = (
+  <div>
+    {
+      test && 'test'
+    }
+  </div>
+);
+
 /**
   Not ideal, but should be solved by parsing the delimiters:
 should be at 1; */
