@@ -31,8 +31,6 @@ def testing_indentation_in_199(some_var):
             no_surprise = True
         else:
             same_here = 'yep'
-        else:
-            very_frustrating = True
 
     another_test = 'split_line' + \
     'should be indented' + \
@@ -43,4 +41,3 @@ def testing_indentation_in_199(some_var):
 def still_indented(other_var):
     '''Yay.'''
     indentation = 'hopelessly broken'
-    
