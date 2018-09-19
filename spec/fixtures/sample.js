@@ -73,7 +73,6 @@ if (true) {
   bar();
 } else {
   foo();
-  bar();
 }
 
 // https://github.com/atom/atom/issues/6691
@@ -85,8 +84,22 @@ if (true)
 else
 {
   foo();
-  bar();
 }
+
+if (true) {
+  if (yes)
+    doit(); // 2
+  bar();
+} else if (more()) {
+  foo(); // 1
+}
+
+if (true)
+  foo();
+else
+  if (more()) { // 1
+    foo(); // 2
+  }
 
 const x = {
   g: {
@@ -186,6 +199,28 @@ const b = (
 /**
   A comment, should be at 1
 */
+
+class MyClass extends OtherComponent {
+
+  state = {
+    test: 1
+  }
+
+  constructor() {
+    test();
+  }
+
+  otherfunction = (a, b = {
+    default: false
+  }) => {
+    more();
+  }
+}
+
+foo(myWrapper(mysecondWrapper({
+  a: 1 // should be at 1
+})));
+
 
 // --------------------------------------------------
 // TODO:
