@@ -27,7 +27,7 @@ foo(2,
   4);
 
 foo({
-  detect_symetric_opening_and_closing_scopes: 'indent me at 1'
+  symetric_opening_and_closing_scopes: 'indent me at 1'
 });
 
 
@@ -153,7 +153,17 @@ b =
 
 b =
   3
-  + 5;
+    + 5;
+
+b =
+  3
+    + 5
+    + 7
+    + 8
+      * 8
+      * 9
+      / 17
+    - 8;
 
 
 /** JSX */
@@ -221,10 +231,6 @@ foo(myWrapper(mysecondWrapper({
   a: 1 // should be at 1
 })));
 
-
-// --------------------------------------------------
-// TODO:
-
 const two = (
   <div>
     {
@@ -232,6 +238,12 @@ const two = (
     }
   </div>
 );
+
+// --------------------------------------------------
+// TODO:
+
+b = 3
+  + 5;
 
 /**
   Not ideal, but should be solved by parsing the delimiters:
