@@ -165,6 +165,10 @@ b =
       / 17
     - 8;
 
+ifthis
+  && thendo()
+  || otherwise
+    && dothis
 
 /** JSX */
 const jsx = (
@@ -241,9 +245,6 @@ const two = (
 
 // --------------------------------------------------
 // TODO:
-
-b = 3
-  + 5;
 
 /**
   Not ideal, but should be solved by parsing the delimiters:
