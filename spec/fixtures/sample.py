@@ -1,3 +1,4 @@
+
 def testing_indentation_in_199(some_var):
     first_line = "auto complete enabled by default?"
     second_line = func_indentation(bracket_matched,
@@ -37,6 +38,8 @@ def testing_indentation_in_199(some_var):
         basic_indent = True
     elif can_you_hear_me_now == False:
         also_works = True
+    else:
+        more()
 
     another_test = 'split_line' + \
         'should be indented' + \
@@ -52,6 +55,17 @@ if test:
     doit
 
 stopit
+
+while something():
+    x = 1
+    g = 2
+
+while 0:
+    x = 1
+    g = 2
+else:
+    x = 2
+    g = 4
 
 
 def set_password(args):
@@ -87,7 +101,9 @@ def main(argv):
     args = parser.parse_args(argv[1:])
     args.function(args)
 
-
+## Comments
+# sfg
+#
 class TokenTests(unittest.TestCase):
 
     def testBackslash(self):
@@ -99,3 +115,54 @@ class TokenTests(unittest.TestCase):
         # Backslash does not means continuation in comments :\
         x = 0
         self.assertEquals(x, 0, 'backslash ending comment')
+
+
+for s in '9223372036854775808', '0o2000000000000000000000', \
+    '0x10000000000000000', \
+    '0b100000000000000000000000000000000000000000000000000000000000000':
+    try:
+        x = eval(s)
+    except OverflowError:
+        self.fail("OverflowError on huge integer literal %r" % s)
+
+
+try:
+    1/0
+except ZeroDivisionError:
+    pass
+else:
+    pass
+
+try: 1/0
+except EOFError: pass
+except TypeError as msg: pass
+except RuntimeError as msg: pass
+except: pass
+else: pass
+try: 1/0
+except (EOFError, TypeError, ZeroDivisionError): pass
+try: 1/0
+except (EOFError, TypeError, ZeroDivisionError) as msg: pass
+try: pass
+finally: pass
+
+# ---------------------------------------------
+# TODO
+
+x = [
+    3,
+    4
+]
+
+x = [
+    (sname, pname)
+    for (sno, sname) in suppliers
+    for (pno, pname) in parts
+    for (sp_sno, sp_pno) in suppart
+    if sno == sp_sno and pno == sp_pno
+]
+
+x = {
+    a: 1,
+    b: 2
+}
