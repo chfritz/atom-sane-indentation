@@ -10,4 +10,4 @@ packages this package will go away.
 
 See [sample.js](https://github.com/chfritz/atom-sane-indentation/blob/master/spec/fixtures/sample.js) for an example.
 
-**Note, this package currently only works for JavaScript.**
+**Note, this package currently only works for JavaScript (incl. JSX), HTML, Python, and C/C++.**
