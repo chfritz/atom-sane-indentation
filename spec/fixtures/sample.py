@@ -1,3 +1,20 @@
+x = {
+    "a": 1,
+    'b': 2
+}
+
+x = [
+    3,
+    4
+]
+
+x = [
+    (sname, pname)
+    for (sno, sname) in suppliers
+    for (pno, pname) in parts
+    for (sp_sno, sp_pno) in suppart
+    if sno == sp_sno and pno == sp_pno
+]
 
 def testing_indentation_in_199(some_var):
     first_line = "auto complete enabled by default?"
@@ -148,21 +165,3 @@ finally: pass
 
 # ---------------------------------------------
 # TODO
-
-x = [
-    3,
-    4
-]
-
-x = [
-    (sname, pname)
-    for (sno, sname) in suppliers
-    for (pno, pname) in parts
-    for (sp_sno, sp_pno) in suppart
-    if sno == sp_sno and pno == sp_pno
-]
-
-x = {
-    a: 1,
-    b: 2
-}
