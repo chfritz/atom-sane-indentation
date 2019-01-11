@@ -99,8 +99,14 @@ if (true)
   foo();
 else
   if (more()) { // 1
+  foo(); // 1
+}
+
+if (true)
+  foo();
+else
+  if (more()) // 1
     foo(); // 2
-  }
 
 if (we
   ()) {
@@ -121,6 +127,10 @@ const x = {
 while (condition)
   inLoop();
 
+while (condition)
+  inLoop();
+after();
+
 while (mycondition) {
   sdfsdfg();
 }
@@ -129,6 +139,27 @@ while (mycondition)
 {
   sdfsdfg();
 }
+
+while (mycond)
+  if (more)
+    doit;
+after();
+
+while (mycond) if (more)
+    doit;
+after();
+
+while (mycondition) {
+  sdfsdfg();
+  if (test) {
+    more()
+  }}
+
+while (mycondition)
+  if (test) {
+  more()
+}
+
 
 switch (e) {
   case 5:
@@ -213,7 +244,7 @@ const two = (
 const a = (
   <img
     src='/img.jpg'
-  />
+    />
 );
 
 const b = (
