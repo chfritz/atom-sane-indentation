@@ -30,7 +30,25 @@ void main(int argc, char** argv) {
 
   for (int i = 0;
     i < 10; i++) {
-      cout << i;
+    cout << i;
+  }
+
+  for (int i = 0; i < 10; i++)
+  {
+    cout << i;
+  }
+
+
+  while (true)
+    doit();
+
+  while (true) {
+    doit();
+  }
+
+  while (true)
+    {
+      doit();
     }
 
   auto f1 = [](int x, int y) -> int {
@@ -60,29 +78,50 @@ void main(int argc,
   return 1;
 }
 
+int foo()
+{
+  return 1;
+}
+
+// --------------------------------------------------------
+// IF conditions
+
+if (no_compound_statement)
+  printf("woot");
+else
+  printf("what else?");
+
+
+if (does_indentation_work) {
+  printf("woot");
+} else {
+  printf("ugh");
+}
+
+if (alternate_style_indentation)
+{
+  printf("still works");
+}
+else
+{
+  printf("hmmm...");
+}
+
+if (alternate_style_indentation)
+{
+  printf("still works");
+}
+else {
+  printf("hmmm...");
+}
+
+// --------------------------------------------------------
+
+
 
 // from issue https://github.com/atom/atom/issues/6655
 void main() {
   bool does_indentation_work = 1;
-  if (does_indentation_work) {
-    printf("woot");
-  } else {
-    printf("ugh");
-  }
-
-  if (no_compound_statement)
-    printf("woot");
-  else
-    printf("what else?");
-
-  if (alternate_style_indentation)
-  {
-    printf("still works");
-  }
-
-  else {
-    printf("hmmm...");
-  }
 
   int test_function = function_with_param(this_param,
     that_param
