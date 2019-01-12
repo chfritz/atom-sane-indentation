@@ -150,16 +150,22 @@ except ZeroDivisionError:
 else:
     pass
 
-try: 1/0
-except EOFError: pass
+try:
+    1/0
+except EOFError:
+    pass
 except TypeError as msg: pass
-except RuntimeError as msg: pass
+except RuntimeError as msg:
+    pass
 except: pass
 else: pass
+
 try: 1/0
 except (EOFError, TypeError, ZeroDivisionError): pass
+
 try: 1/0
 except (EOFError, TypeError, ZeroDivisionError) as msg: pass
+
 try: pass
 finally: pass
 
