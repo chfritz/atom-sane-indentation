@@ -94,8 +94,8 @@ def set_password(args):
             print("Passwords do not match, try again")
         elif len(password1) < 4:
             print("Please provide at least 4 characters")
-        else:
-            password = password1
+    else:
+        password = password1
 
     password_hash = passwd(password)
     cfg = BaseJSONConfigManager(config_dir=jupyter_config_dir())
@@ -168,6 +168,16 @@ except (EOFError, TypeError, ZeroDivisionError) as msg: pass
 
 try: pass
 finally: pass
+
+def foo():
+    while True:
+        if test:
+            more()
+            more()
+        elif test2:
+            more2()
+        else:
+            bar()
 
 # ---------------------------------------------
 # TODO
