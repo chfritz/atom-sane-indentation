@@ -24,6 +24,18 @@ foo( 2, {
   sdf
 });
 
+foo( 2, {
+    sd,
+    sdf
+  }, 'abc');
+
+foo( 2,
+  {
+    sd,
+    sdf
+  },
+  'abc');
+
 foo(2,
   4);
 
@@ -252,8 +264,15 @@ const b = (
     src='/img.jpg' />
 );
 
-/**
+
+/*
   A comment, should be at 1
+  be at 1
+*/
+
+/**
+  Doc comment, should be at 1
+  be at 1
 */
 
 class MyClass extends OtherComponent {
@@ -290,7 +309,7 @@ const two = (
 
 /**
   Not ideal, but should be solved by parsing the delimiters:
-should be at 1; */
+  should be at 1; */
 
 // -------------------------------------------------
 
