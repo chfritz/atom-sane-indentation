@@ -107,6 +107,16 @@ if (true) {
   foo(); // 1
 }
 
+if (true) {
+  if (yes)
+    doit(); // 2
+  bar();
+} else if (more()) {
+  foo(); // 1
+} else {
+  last();
+}
+
 if (true)
   foo();
 else
