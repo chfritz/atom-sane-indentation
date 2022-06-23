@@ -1,3 +1,8 @@
+**Given [GitHub's announcement to sunset Atom](https://github.blog/2022-06-08-sunsetting-atom/) I've stopped developing this extension and have instead ported it to VS Code, [here](https://github.com/chfritz/vscode-sane-indentation).**
+
+
+------
+
 # sane-indentation package
 
 This package [monkey-patches](https://en.wikipedia.org/wiki/Monkey_patch) the
